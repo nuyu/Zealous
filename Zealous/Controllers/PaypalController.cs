@@ -7,7 +7,7 @@ using Zealous.Models;
 
 namespace Zealous.Controllers
 {
-    public class PaypalController : Controller
+    public class PaypalController : ZealousController
     {
         
         public ActionResult Index()
@@ -25,6 +25,14 @@ namespace Zealous.Controllers
             var getData = new GetDataPaypal();
             var order = getData.InformationOrder(getData.GetPayPalResponse(Request.QueryString["tx"]));
             ViewBag.tx = Request.QueryString["tx"];
+
+
+            var payment = new Payment();
+            payment.Amount = order.GrossTotal;
+            payment.Date = DateTime.Now;
+            payment.EventId = 1;
+            db.Payments.Add(payment);
+            db.SaveChanges();
             return View();
         }
 

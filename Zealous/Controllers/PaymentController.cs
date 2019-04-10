@@ -7,7 +7,7 @@ using Zealous.Models;
 
 namespace Zealous.Controllers
 {
-    public class PaymentController : Controller
+    public class PaymentController : ZealousController
     {
 
         [HttpGet]
