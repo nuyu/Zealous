@@ -11,7 +11,7 @@ namespace Zealous.Controllers
     {
 
         [HttpGet]
-        [Authorize]
+     [Authorize]
         public ActionResult Index()
         {
             return View();

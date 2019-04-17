@@ -33,7 +33,7 @@ namespace Zealous.Controllers
             payment.EventId = 1;
             db.Payments.Add(payment);
             db.SaveChanges();
-            return View();
+            return View(order);
         }
 
     }
