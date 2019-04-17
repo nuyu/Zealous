@@ -218,6 +218,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Image\44422862_1881546418607322_2913510641702535168_n.jpg" />
+    <Content Include="Views\Image\7WcWv1d1_400x400.jpg" />
+    <Content Include="Views\Image\Webp.net-resizeimage.jpg" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
