@@ -1,5 +1,5 @@
 ﻿@using System.Configuration
-
+@model Zealous.Models.Order
 @{
     Layout = null;
 }
@@ -16,11 +16,8 @@
         Checkout Paypal Success !^^
     </div>
     <br />
-    <form action="@ConfigurationManager.AppSettings["urlSubmitPayment"]" method="POST">
-        <input type="hidden" name="cmd" value="_notify-synch">
-        <input type="hidden" name="tx" value="@ViewBag.tx">
-        <input type="hidden" name="at" value="@ConfigurationManager.AppSettings["Token"]">
-        <input type="submit" value="Get Data" class="btn btn-primary">
-    </form>
+ <a href="\">home</a>
+
+    <span>@Model.ItemName</span>
 </body>
 </html>
