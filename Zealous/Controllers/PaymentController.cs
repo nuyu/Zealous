@@ -35,10 +35,7 @@ namespace Zealous.Controllers
             }
             return View(); // model validate is false
         }
-        [HttpGet]
-        public ActionResult Ev(Event p) {
-            return View("Payment/index");
-        }
+       
 
     }
 }

@@ -191,6 +191,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Entities.cs" />
+    <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\ZealousContext.cs" />
     <Compile Include="Models\GetDataPaypal.cs" />
     <Compile Include="Models\IdentityModels.cs" />

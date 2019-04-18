@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Zealous.Models;
 
 namespace Zealous.Controllers
 {
-    public class EquipmentController : Controller
+    public class EquipmentController : ZealousController 
     {
         // GET: Equipment
-        public ActionResult Index()
+        [HttpGet]
+        [Authorize]
+        public ActionResult add(Equipment e)
         {
             return View();
         }
+        
+
     }
 }
