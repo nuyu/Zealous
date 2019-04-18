@@ -182,6 +182,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\PaypalController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\ZealousController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -263,6 +264,9 @@
     <Content Include="Views\Paypal\GetDataPaypal.cshtml" />
     <Content Include="Views\Paypal\Index.cshtml" />
     <Content Include="Views\Event\Event.cshtml" />
+    <Content Include="Views\Event\Track.cshtml" />
+    <Content Include="Views\Event\EventsList.cshtml" />
+    <Content Include="Views\Report\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Zealous\" />
