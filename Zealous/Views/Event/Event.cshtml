@@ -1,4 +1,4 @@
-﻿@model  Zealous.Models.Event
+﻿@model Zealous.Models.Event
 @{
 //Layout = ;
 }
@@ -87,34 +87,30 @@
             <label for="item_name">
                 Product's name
             </label>
-            @Html.TextBoxFor(x => x.item_name, new { @class = "form-control", placeholder = "Product's name" })
-            @Html.ValidationMessageFor(x => x.item_name)
+            @Html.TextBoxFor(x => x.EventName, new { @class = "form-control", placeholder = "Product's name" })
+            @Html.ValidationMessageFor(x => x.EventName)
         </div>
 
         <div class="form-group">
             <label for="item_number">Product code</label>
-            @Html.TextBoxFor(x => x.item_number, new { @class = "form-control", placeholder = "Product code" })
-            @Html.ValidationMessageFor(x => x.item_number)
+            @Html.TextBoxFor(x => x.Id, new { @class = "form-control", placeholder = "Product code" })
+            @Html.ValidationMessageFor(x => x.Id)
         </div>
 
         <div class="form-group">
             <label for="amount">Product price</label>
-            @Html.TextBoxFor(x => x.amount, new { @class = "form-control", placeholder = "Product price" })
-            @Html.ValidationMessageFor(x => x.amount)
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control", placeholder = "Product price" })
+            @Html.ValidationMessageFor(x => x.Description)
         </div>
 
-        <div class="form-group">
-            <label for="quantity">Number of products</label>
-            @Html.TextBoxFor(x => x.quantity, new { @class = "form-control", placeholder = "Number of products" })
-            @Html.ValidationMessageFor(x => x.quantity)
-        </div>
+       
         <button type="submit" class="btn btn-success">
             Add to cart
         </button>
         }
     </div>
     <div class="col-md-12">
-        @Html.ActionLink("Pay", "Index", new { controller = "Paypal" }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Pa1111y", "Ev", new { controller = "Payment" }, new { @class = "btn btn-primary" })
     </div>
 
 </body>
