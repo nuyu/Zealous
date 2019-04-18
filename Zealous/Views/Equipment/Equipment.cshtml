@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Equipment";
+}
+
+<h2>Manage Equipment</h2>
+
+<script>
+
+    function add() {
+        window.location = "add.cshtml";
+    }
+
+    function del() {
+        window.location = "delete.cshtml";
+    }
+
+    function booking() {
+        window.location = "book.cshtml";
+    }
+
+    function update() {
+        window.location = "update.cshtml";
+    }
+
+</script>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <center>
+        <form>
+            <fieldset>
+                <legend>Manage Equipment</legend>
+                <br><br>
+                <input type="button" name="Book" value="Book Equipment" onclick="booking()"><br><br>
+                <input type="button" name="Add" value="Add Equipment" onclick="add()"><br><br>
+                <input type="button" name="Del" value="Delete Equipment" onclick="del()"><br><br>
+                <input type="button" name="Update" value="Update Equipment" onclick="update()"><br><br>
+            </fieldset>
+        </form>
+    </center>
+}

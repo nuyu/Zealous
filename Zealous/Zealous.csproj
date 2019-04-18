@@ -172,11 +172,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\FilterConfig2.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\RouteConfig2.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EquipmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
@@ -257,6 +261,11 @@
     <Content Include="Views\Payment\index.cshtml" />
     <Content Include="Views\Paypal\GetDataPaypal.cshtml" />
     <Content Include="Views\Paypal\Index.cshtml" />
+    <Content Include="Views\Equipment\Equipment.cshtml" />
+    <Content Include="Views\Equipment\add.cshtml" />
+    <Content Include="Views\Equipment\update.cshtml" />
+    <Content Include="Views\Equipment\delete.cshtml" />
+    <Content Include="Views\Equipment\book.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
