@@ -262,7 +262,7 @@
     <Content Include="Views\Payment\index.cshtml" />
     <Content Include="Views\Paypal\GetDataPaypal.cshtml" />
     <Content Include="Views\Paypal\Index.cshtml" />
-    <Content Include="Views\Equipment\Equipment.cshtml" />
+    <Content Include="Views\Equipment\Equip.cshtml" />
     <Content Include="Views\Equipment\add.cshtml" />
     <Content Include="Views\Equipment\update.cshtml" />
     <Content Include="Views\Equipment\delete.cshtml" />
