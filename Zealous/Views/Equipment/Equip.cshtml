@@ -2,33 +2,19 @@
 @{
     ViewBag.Title = "Equipment";
 }
-
-<h2>Manage Equipment</h2>
+<br /><br />
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-<center>
-    <form>
-        <fieldset>
-            <legend>Booking Equipment</legend>
-            <br><br>
-            Name : <input type="text" name="text" />
-            <br />
-            Booking date : <input type="date" />
-            <br />
-            Item selection : <select required>
-                                <option>Tables</option>
-                                <option>Chairs</option>
-                                <option>Microphone</option>
-                                <option>Tents</option>
-                             </select>
-            <br />
-            No of item : <input type="number" name="item" />
-        </fieldset>
-    </form>
-    @Html.ActionLink("Submit", "equip", new { controller = "Equipment" }, new { @class = "btn btn-primary" })
-</center>
+
+
+    @Html.ActionLink("Book Equipment", "BookEquipment", new { controller = "Equipment" }, new { @class = "btn btn-primary" })<br /><br />
+    @Html.ActionLink("Add Equipment", "AddEquipment", new { controller = "Equipment" }, new { @class = "btn btn-primary" })<br /><br />
+    @Html.ActionLink("Update Equipment", "UpdEquipment", new { controller = "Equipment" }, new { @class = "btn btn-primary" })<br /><br />
+    @Html.ActionLink("Delete Equipment", "DelEquipment", new { controller = "Equipment" }, new { @class = "btn btn-primary" })<br /><br />
+
+
 }

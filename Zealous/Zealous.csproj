@@ -263,10 +263,10 @@
     <Content Include="Views\Paypal\GetDataPaypal.cshtml" />
     <Content Include="Views\Paypal\Index.cshtml" />
     <Content Include="Views\Equipment\Equip.cshtml" />
-    <Content Include="Views\Equipment\add.cshtml" />
-    <Content Include="Views\Equipment\update.cshtml" />
-    <Content Include="Views\Equipment\delete.cshtml" />
-    <Content Include="Views\Equipment\book.cshtml" />
+    <Content Include="Views\Equipment\AddEquipment.cshtml" />
+    <Content Include="Views\Equipment\BookEquipment.cshtml" />
+    <Content Include="Views\Equipment\DelEquipment.cshtml" />
+    <Content Include="Views\Equipment\UpdEquipment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

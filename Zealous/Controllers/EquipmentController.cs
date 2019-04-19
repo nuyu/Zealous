@@ -12,11 +12,25 @@ namespace Zealous.Controllers
         // GET: Equipment
         [HttpGet]
         [Authorize]
-        public ActionResult Equip(Equipment e)
+        public ActionResult equip()
         {
             return View();
         }
-        
-
+        public ActionResult BookEquipment(Book e)
+        {
+            return View();
+        }
+        public ActionResult AddEquipment(Add e)
+        {
+            return View();
+        }
+        public ActionResult DelEquipment(Del e)
+        {
+            return View();
+        }
+        public ActionResult UpdEquipment(Upd e)
+        {
+            return View();
+        }
     }
 }
