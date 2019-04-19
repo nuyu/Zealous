@@ -17,21 +17,7 @@
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Checkout example for Bootstrap</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/checkout/">
-
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,18 +27,9 @@
             @Html.AntiForgeryToken()
             @Html.ValidationSummary(true)
 
-          
-
-  
- 
-
-  
-
 
             <div class="form-group">
-                <label for="item_name">
-                    Product's name
-                </label>
+                <label for="item_name">  Product's name</label>
                 @Html.TextBoxFor(x => x.item_name, new { @class = "form-control", placeholder = "Product's name" })
                 @Html.ValidationMessageFor(x => x.item_name)
             </div>
@@ -74,14 +51,12 @@
                 @Html.TextBoxFor(x => x.quantity, new { @class = "form-control", placeholder = "Number of products" })
                 @Html.ValidationMessageFor(x => x.quantity)
             </div>
-            <button type="submit" class="btn btn-success">
-                Add to cart
-            </button>
+            <button type="submit" class="btn btn-success">  Add to cart </button>
         }
     </div>
     <div class="col-md-12">
         @Html.ActionLink("Pay", "index", new { controller = "Paypal" }, new { @class = "btn btn-primary" })
     </div>
-  
+
 </body>
 </html>

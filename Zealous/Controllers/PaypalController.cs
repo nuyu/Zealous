@@ -29,6 +29,7 @@ namespace Zealous.Controllers
 
             var payment = new Payment();
             payment.Amount = order.GrossTotal;
+           
             payment.Date = DateTime.Now;
             payment.EventId = 1;
             db.Payments.Add(payment);

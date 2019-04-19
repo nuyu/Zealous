@@ -1,5 +1,5 @@
 ﻿@using System.Configuration
-@model List<Zealous.Models.Product>
+@using Zealous.Models;
 @{
     Layout = null;
 }
@@ -29,10 +29,54 @@
                 <input type="hidden" name="@Url.Content("quantity_" + (i + 1))" value="@Model[i].quantity" />
             }
             <br />
+            <table border="1">
+                <tr>
+                    <th>item name</th>
+                    <th>item number</th>
+                    <th>amount</th>
+                    <th>Quantity</th>
+                </tr>
+                @foreach (var cart in (List<Product>)Session["cart"])
+
+                {
+                    <tr>
+                        <td>@cart.item_name</td>
+                        <td>@cart.item_number</td>
+                        <td>@cart.amount</td>
+                        <td>@cart.quantity</td>
+                    </tr>
+                }
+            </table>
+
+
+
+
+
             <div class="col-md-12">
-                <input type="submit" value="Checkout Now" class="btn btn-primary col-md-12" />
+                <label for="paypal" class="method paypal">
+                    <img src="~/image/paypal_logo.png" />
+                    <div>
+                        <input id="paypal" type="radio" name="payment">
+                        <input type="submit" value="Checkout Now" class="btn btn-primary col-md-12" />
+                    </div>
+                </label>
             </div>
-        </form>
+
+            <label for="paypal" class="method paypal">
+                <img src="~/image/paypal_logo.png" />
+                <div class="radio-input">
+                    <input id="paypal" type="radio" name="payment">
+                    Pay £340.00 with PayPal
+                </div>
+            </label>
+    </div>
+
+
+
+
+
+    </div>
+    </form>
     </div>
 </body>
 </html>
