@@ -23,10 +23,9 @@
             <input type="hidden" name="business" value="@ConfigurationManager.AppSettings["accountBusiness"]" />
             @for (int i = 0; i < Model.Count; i++)
             {
-                <input type="hidden" name="@Url.Content("item_name_"+(i+1))" value="@Model[i].item_name" />
-                <input type="hidden" name="@Url.Content("item_number_"+(i+1))" value="@Model[i].item_number" />
-                <input type="hidden" name="@Url.Content("amount_"+(i+1))" value="@Model[i].amount" />
-                <input type="hidden" name="@Url.Content("quantity_" + (i + 1))" value="@Model[i].quantity" />
+                <input type="hidden" name="@Url.Content("item_name_"+(i+1))" value="@Model[i].Item_name" />
+                <input type="hidden" name="@Url.Content("item_number_"+(i+1))" value="@Model[i].Item_number " />
+                <input type="hidden" name="@Url.Content("amount_"+(i+1))" value="@Model[i].Amount" />
             }
             <br />
             <table border="1">
@@ -36,14 +35,15 @@
                     <th>amount</th>
                     <th>Quantity</th>
                 </tr>
+                
                 @foreach (var cart in (List<Product>)Session["cart"])
 
                 {
                     <tr>
-                        <td>@cart.item_name</td>
-                        <td>@cart.item_number</td>
-                        <td>@cart.amount</td>
-                        <td>@cart.quantity</td>
+                        <td>@cart.Item_name</td>
+                      
+                        <td>@cart.Amount</td>
+                       
                     </tr>
                 }
             </table>
@@ -62,21 +62,12 @@
                 </label>
             </div>
 
-            <label for="paypal" class="method paypal">
-                <img src="~/image/paypal_logo.png" />
-                <div class="radio-input">
-                    <input id="paypal" type="radio" name="payment">
-                    Pay £340.00 with PayPal
-                </div>
-            </label>
     </div>
 
 
 
 
 
-    </div>
-    </form>
-    </div>
+  
 </body>
 </html>
