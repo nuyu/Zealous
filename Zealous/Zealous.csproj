@@ -229,6 +229,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="image\Eminem-Quotes-Wallpaper-14249.jpg" />
     <Content Include="image\paypal_logo.png" />
+    <Content Include="Migration\Event.sql" />
+    <Content Include="Migration\EventTracking.sql" />
+    <Content Include="Migration\Insert Event.sql" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="obj\Release\Zealous.csproj.CoreCompileInputs.cache" />
