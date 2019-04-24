@@ -10,8 +10,17 @@ namespace Zealous.Controllers
     public class ProdutController : ZealousController
     {
 
-       //GET:
-       
+       //GET: Products
+       public ActionResult Index()
+        {
+            return View();
+        }
+
+       public PartialviewResult ProductListPartial()
+        {
+            var productList = database;
+            return PartialView(productList);
+        }
 
     }
 }
