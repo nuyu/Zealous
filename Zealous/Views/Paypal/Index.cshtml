@@ -1,5 +1,6 @@
 ﻿@using System.Configuration
 @using Zealous.Models;
+@model  List<Product>
 @{
     Layout = null;
 }
@@ -35,15 +36,15 @@
                     <th>amount</th>
                     <th>Quantity</th>
                 </tr>
-                
-                @foreach (var cart in (List<Product>)Session["cart"])
+
+                @foreach (var cart in Model)
 
                 {
                     <tr>
                         <td>@cart.Item_name</td>
-                      
+
                         <td>@cart.Amount</td>
-                       
+
                     </tr>
                 }
             </table>
@@ -68,6 +69,6 @@
 
 
 
-  
+
 </body>
 </html>

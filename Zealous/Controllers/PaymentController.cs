@@ -10,7 +10,7 @@ namespace Zealous.Controllers
     public class PaymentController : ZealousController
     {
 
-        private string strCart = "Cart";
+        
         [HttpGet]
         [Authorize]
        
@@ -51,7 +51,8 @@ namespace Zealous.Controllers
 
             return View(products);
         }
-       
+      
+
 
     }
 }

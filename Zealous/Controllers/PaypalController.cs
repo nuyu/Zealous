@@ -47,7 +47,36 @@ namespace Zealous.Controllers
             Session["cart"] =null;
             return View(order);
         }
-       
+        public ActionResult OrderNow(int? id)
+        {
+            var p = db.Products.FirstOrDefault(t => t.Id == id);
+            List<Product> IsCart;
+            if (p == null)
+            {
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+            }
+            if (Session["strCart"] == null)
+            {
+               IsCart = new List<Product>
+                {
+                   p
+            };
+                Session["strCart"] = IsCart;
+
+            }
+            else
+            {
+                 IsCart = (List<Product>)Session["strCart"];
+                IsCart.Add(p);
+                Session["strCart"] = IsCart;
+            }
+
+
+            return View("Index", IsCart);
+
+
+        }
+
 
     }
 }
