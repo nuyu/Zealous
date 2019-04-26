@@ -11,12 +11,13 @@ using Zealous.Models;
 namespace Zealous.Controllers
 {
     [Authorize]
-    public class EventController : Controller
+    public class EventController : ZealousController
     {
         //Return all available events for this user
-        public ActionResult MyEvents()
+        public ActionResult EventsList()
         {
-            return View();
+            var events = db.Events.ToList();
+            return View(events);
         }
 
         //  GET: Event/Event
@@ -26,7 +27,7 @@ namespace Zealous.Controllers
         }
 
         // Track one event progress
-        public ActionResult Track()
+        public ActionResult Track(int id)
         {
             return View();
         }
