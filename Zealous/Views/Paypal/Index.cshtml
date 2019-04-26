@@ -34,18 +34,18 @@
                     <th>item name</th>
                     <th>item number</th>
                     <th>amount</th>
-                    <th>Quantity</th>
+                    
                 </tr>
 
                 @foreach (var cart in Model)
 
                 {
-                    <tr>
-                        <td>@cart.Item_name</td>
+                <tr>
+                    <td>@cart.Item_name</td>
+                    <td>@cart.Item_number</td>
+                    <td>@cart.Amount</td>
 
-                        <td>@cart.Amount</td>
-
-                    </tr>
+                </tr>
                 }
             </table>
 
