@@ -233,6 +233,8 @@
     <Content Include="image\paypal_logo.png" />
     <Content Include="image\wed.jpg" />
     <Content Include="image\wedd.jpg" />
+    <Content Include="Migration\Product.sql" />
+    <Content Include="Migration\Payment.sql" />
     <Content Include="Migration\Equipment.sql" />
     <Content Include="Migration\Booking.sql" />
     <Content Include="Migration\Event.sql" />
