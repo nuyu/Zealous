@@ -13,6 +13,7 @@ namespace Zealous.Controllers
         
         [HttpGet]
         [Authorize]
+
        
         public ActionResult Index()
         {
@@ -37,13 +38,14 @@ namespace Zealous.Controllers
                 {
                     Session["cart"] = new List<Product>() { p };
                 }
-                ModelState.Clear();// clear data from Form
+              
                 RedirectToAction("Index", "Home"); // Anti F5 submit
             }
             return View(); // model validate is false
         }
-       
-      
+
+     
+
 
 
     }

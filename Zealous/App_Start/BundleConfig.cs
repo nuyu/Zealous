@@ -20,13 +20,20 @@ namespace Zealous
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap.min.js"
+            )
+                      
+                      );
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/bootstrap-theme.css",
+                       "~/Content/bootstrap-theme.css",
                       "~/Content/site.css",
                       "~/Content/divtable.css",
-                      "~/Content/about-us.css"));
+                      "~/Content/about-us.css",
+                      "~/Content/font-awesome.min.css"));
         }
     }
 }
