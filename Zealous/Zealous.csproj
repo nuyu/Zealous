@@ -303,6 +303,7 @@
     <Content Include="Views\Equipment\UpdEquipment.cshtml" />
     <Content Include="Views\Payment\GetDataPaypal.cshtml" />
     <Content Include="Views\Event\index.cshtml" />
+    <Content Include="Views\Event\Event.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Zealous\" />
