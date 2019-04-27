@@ -1,0 +1,64 @@
+﻿@using Zealous.Models;
+@model  List<Product>
+
+
+
+@{
+//Layout = ;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        Add products
+    </title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+</head>
+
+
+@{
+    foreach (var item in Model)
+    {
+        <div class="main-content">
+            <div class="content-image">
+                <a href="#"><img src="~/image/Eminem-Quotes-Wallpaper-14249.jpg"</a>
+            </div>
+
+            <div class="content-title">
+                <a href="#"> @item.Item_name</a>
+            </div>
+
+            <div class="content-price">
+                Price: $@item.Amount
+            </div>
+
+            <div class="content-link">
+                @Html.ActionLink("Add to cart", "OrderNow", "Payment", new { id =item.Id }, null)
+            </div>
+
+        </div>
+
+        }
+
+    }
+
+
+
+    
+
+
+    </div>
+
+   
+
+    </body>
+</html>

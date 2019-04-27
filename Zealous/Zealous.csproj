@@ -185,7 +185,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
-    <Compile Include="Controllers\PaypalController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\ZealousController.cs" />
     <Compile Include="Global.asax.cs">
@@ -234,6 +233,11 @@
     <Content Include="image\paypal_logo.png" />
     <Content Include="image\wed.jpg" />
     <Content Include="image\wedd.jpg" />
+    <Content Include="Migration\Equipment.sql" />
+    <Content Include="Migration\Booking.sql" />
+    <Content Include="Migration\Event.sql" />
+    <Content Include="Migration\EventTracking.sql" />
+    <Content Include="Migration\Insert Event.sql" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="obj\Release\Zealous.csproj.CoreCompileInputs.cache" />
@@ -290,13 +294,13 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Payment\index.cshtml" />
-    <Content Include="Views\Paypal\GetDataPaypal.cshtml" />
-    <Content Include="Views\Paypal\Index.cshtml" />
     <Content Include="Views\Equipment\Equip.cshtml" />
     <Content Include="Views\Equipment\AddEquipment.cshtml" />
     <Content Include="Views\Equipment\BookEquipment.cshtml" />
     <Content Include="Views\Equipment\DelEquipment.cshtml" />
     <Content Include="Views\Equipment\UpdEquipment.cshtml" />
+    <Content Include="Views\Payment\GetDataPaypal.cshtml" />
+    <Content Include="Views\Event\index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Zealous\" />

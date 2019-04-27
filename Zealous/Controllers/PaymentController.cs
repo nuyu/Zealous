@@ -10,48 +10,72 @@ namespace Zealous.Controllers
     public class PaymentController : ZealousController
     {
 
-        
-        [HttpGet]
-        [Authorize]
-       
         public ActionResult Index()
         {
-            //var products = db.Products.OrderBy(x => x.Item_name).ToList();
-            //product.Add(s);
-
-
-            return View();
-            //return View();
-        }
-        
-        [HttpPost]
-        public ActionResult Index(Product p)
-        {
-            if (ModelState.IsValid)
+            if (Session["cart"] == null)
             {
-                if (Session["cart"] != null)
-                {
-                    var ls = Session["cart"] as List<Product>;
-                    ls.Add(p);
-                }
-                else
-                {
-                    Session["cart"] = new List<Product>() { p };
-                }
-                ModelState.Clear();// clear data from Form
-                RedirectToAction("Index", "Home"); // Anti F5 submit
+                return RedirectToAction("Index", "Home");
             }
-            return View(); // model validate is false
+            //pass data to be used in view
+            var ls = Session["cart"] as List<Product>;
+            return View(ls);
+
+
         }
-        public ActionResult Indexx(Product s)
+       
+
+
+
+        /// <summary>
+        /// /this function 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetDataPaypal()
         {
-            var products = db.Products.OrderBy(x => x.Item_name).ToList();
-            //product.Add(s);
+            var getData = new GetDataPaypal();
+            var order = getData.InformationOrder(getData.GetPayPalResponse(Request.QueryString["tx"]));
+            ViewBag.tx = Request.QueryString["tx"];
 
 
-            return View(products);
+            var payment = new Payment();
+            payment.Amount = order.GrossTotal;
+           
+            payment.Date = DateTime.Now;
+            payment.EventId = 1;
+            db.Payments.Add(payment);
+            db.SaveChanges();
+            Session["cart"] =null;
+            return View(order);
         }
-      
+        public ActionResult OrderNow(int? id)
+        {
+            var p = db.Products.FirstOrDefault(t => t.Id == id);
+            List<Product> IsCart;
+            if (p == null)
+            {
+                return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
+            }
+            if (Session["strCart"] == null)
+            {
+               IsCart = new List<Product>
+                {
+                   p
+            };
+                Session["strCart"] = IsCart;
+
+            }
+            else
+            {
+                 IsCart = (List<Product>)Session["strCart"];
+                IsCart.Add(p);
+                Session["strCart"] = IsCart;
+            }
+
+
+            return View("index", IsCart);
+
+
+        }
 
 
     }
