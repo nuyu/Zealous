@@ -1,36 +1,50 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
 using Zealous.Models;
 
 namespace Zealous.Controllers
 {
-    [Authorize]
     public class EventController : ZealousController
     {
-        //Return all available events for this user
-        public ActionResult EventsList()
-        {
-            var events = db.Events.ToList();
-            return View(events);
-        }
 
-        //  GET: Event/Event
-        public ActionResult Event()
+        
+        [HttpGet]
+        [Authorize]
+       
+        public ActionResult Index()
         {
-            return View();
-        }
+            var products = db.Products.OrderBy(x => x.Item_name).ToList();
+            //product.Add(s);
 
-        // Track one event progress
-        public ActionResult Track(int id)
-        {
-            return View();
+
+            return View(products);
         }
+        
+        [HttpPost]
+        public ActionResult Index(Product p)
+        {
+            if (ModelState.IsValid)
+            {
+                if (Session["cart"] != null)
+                {
+                    var ls = Session["cart"] as List<Product>;
+                    ls.Add(p);
+                }
+                else
+                {
+                    Session["cart"] = new List<Product>() { p };
+                }
+                ModelState.Clear();// clear data from Form
+                RedirectToAction("Index", "Home"); // Anti F5 submit
+            }
+            return View(); // model validate is false
+        }
+       
+      
+
 
     }
 }
