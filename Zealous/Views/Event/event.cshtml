@@ -23,56 +23,56 @@
     <div class="div-main">
         @using (Html.BeginForm())
         {
-            @Html.AntiForgeryToken()
-            @Html.ValidationSummary(true)
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
 
 
-            <!-- Page Content -->
-            <div class="top-breadcrumb">
+        <!-- Page Content -->
+        <div class="top-breadcrumb">
+            <ul>
+                <li> <a href="#">Home</a><span class="span-breadcrumb">>>></span></li>
+                <li> <a href="#">Product</a></li>
                 <ul>
-                    <li> <a href="#">Home</a><span class="span-breadcrumb">>>></span></li>
-                    <li> <a href="#">Product</a></li>
-                    <ul>
 
-            </div><!--top-breadcrumb-->
-            <div class="clear"></div>
-            <div class="main-content">
-                <div class="content-image">
-                    <img src="image/wed.jpg" />
-                </div><!--content-image-->
-                <div class="content-title">
-                    <a href="">Wedding Package</a>
-                </div><!--content-title-->
-                <div class="content-price">
-                    Price: RM500
-                </div><!--content-price-->
+        </div><!--top-breadcrumb-->
+        <div class="clear"></div>
+        <div class="main-content">
+            <div class="content-image">
+                <img src="image/wed.jpg" />
+            </div><!--content-image-->
+            <div class="content-title">
+                <a href="">Wedding Package</a>
+            </div><!--content-title-->
+            <div class="content-price">
+                Price: RM500
+            </div><!--content-price-->
 
-            </div><!--main-content-->
-            <div class="main-content">
-                <div class="content-image">
-                    <a href="#"><img src="image/wedd.jpg" /></a>
-                </div><!--content-image-->
-                <div class="content-title">
-                    <a href="">Engagement Package</a>
-                </div><!--content-title-->
-                <div class="content-price">
-                    Price: RM500
-                </div><!--content-price-->
+        </div><!--main-content-->
+        <div class="main-content">
+            <div class="content-image">
+                <a href="#"><img src="image/wedd.jpg" /></a>
+            </div><!--content-image-->
+            <div class="content-title">
+                <a href="">Engagement Package</a>
+            </div><!--content-title-->
+            <div class="content-price">
+                Price: RM500
+            </div><!--content-price-->
 
-            </div><!--main-content-->
-            <div class="main-content">
-                <div class="content-image">
-                    <img src="image/business-conference.jpg" />
-                </div><!--content-image-->
-                <div class="content-title">
-                    <a href="">Meeting Package</a>
-                </div><!--content-title-->
-                <div class="content-price">
-                    Price: RM500
-                </div><!--content-price-->
+        </div><!--main-content-->
+        <div class="main-content">
+            <div class="content-image">
+                <img src="image/business-conference.jpg" />
+            </div><!--content-image-->
+            <div class="content-title">
+                <a href="">Meeting Package</a>
+            </div><!--content-title-->
+            <div class="content-price">
+                Price: RM500
+            </div><!--content-price-->
 
-            </div><!--main-content-->
-       
+        </div><!--main-content-->
+
 
         <div class="form-group">
             <label for="item_name">
@@ -98,11 +98,11 @@
         <button type="submit" class="btn btn-success">
             Add to cart
         </button>
-    }
-        </div>
-        <div class="col-md-12">
-            @Html.ActionLink("Proceed", "index", new { controller = "Payment" }, new { @class = "btn btn-primary" })
-        </div>
+        }
+    </div>
+    <div class="col-md-12">
+        @Html.ActionLink("Proceed", "index", new { controller = "Payment" }, new { @class = "btn btn-primary" })
+    </div>
 
-    </body>
+</body>
 </html>
