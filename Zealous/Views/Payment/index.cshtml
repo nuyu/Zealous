@@ -2,7 +2,7 @@
 @using Zealous.Models;
 @model  List<Product>
 @{
-    Layout = null;
+    //Layout = null;
 }
 
 <!DOCTYPE html>
@@ -65,7 +65,7 @@
                             <td data-th="Price" class="text-center">@cart.Amount</td>
                             <td colspan="3"></td>
                             <td class="actions" data-th="">
-                                @Html.ActionLink("Delete", "Delete", "Payment",  htmlAttributes: new { @class = "btn btn-danger btn-sm", @role = "button" })
+                                @Html.ActionLink("Delete", "Delete", "Payment", new { id = cart.Id }, htmlAttributes: new { @class = "btn btn-danger btn-sm", @role = "button" })
                             </td>
                         </tr>
                         <tr></tr>

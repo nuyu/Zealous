@@ -83,13 +83,14 @@ namespace Zealous.Controllers
 
         public ActionResult Delete(int? id)
         {
-           var p = db.Products.FirstOrDefault(t=>t.Id==id);
-            List<Product> IsCart;
+            //db.Products.FirstOrDefault(t=>t.Id==id);
+            List<Product> IsCart = (List<Product>)Session["strCart"];
+            var p = IsCart.FirstOrDefault(t => t.Id == id);
             if (p == null)
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
-            IsCart = (List<Product>)Session["strCart"];
+            
             IsCart.Remove(p);
             Session["strCart"] = IsCart;
             return View("index", IsCart);
