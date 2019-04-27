@@ -16,11 +16,11 @@ namespace Zealous.Controllers
        
         public ActionResult Index()
         {
-            var products = db.Products.OrderBy(x => x.Item_name).ToList();
+            //var products = db.Products.OrderBy(x => x.Item_name).ToList();
             //product.Add(s);
 
 
-            return View(products);
+            return View();
             //return View();
         }
         

@@ -12,7 +12,8 @@ namespace Zealous.Models
 
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Event> Events { get; set; }
-        
+        public DbSet<Product> Products { get; set; }
+
         public ZealousContext()
             : base("DefaultConnection")
         {

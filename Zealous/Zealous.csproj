@@ -228,8 +228,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="image\business-conference.jpg" />
     <Content Include="image\Eminem-Quotes-Wallpaper-14249.jpg" />
+    <Content Include="image\h&amp;m.jpg" />
     <Content Include="image\paypal_logo.png" />
+    <Content Include="image\wed.jpg" />
+    <Content Include="image\wedd.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="obj\Release\Zealous.csproj.CoreCompileInputs.cache" />
@@ -245,7 +249,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Views\Event\EventsList.cshtml" />
     <Content Include="Views\Event\Track.cshtml" />
     <Content Include="Views\Report\index.cshtml" />
     <Content Include="Web.config">
@@ -294,7 +297,6 @@
     <Content Include="Views\Equipment\BookEquipment.cshtml" />
     <Content Include="Views\Equipment\DelEquipment.cshtml" />
     <Content Include="Views\Equipment\UpdEquipment.cshtml" />
-    <Content Include="Views\Event\Event.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Zealous\" />
