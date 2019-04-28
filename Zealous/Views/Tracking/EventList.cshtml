@@ -1,0 +1,71 @@
+﻿@model List<Zealous.Models.Event>
+@{
+    ViewBag.Title = "EventList";
+}
+
+<h2>EventList</h2>
+
+<div class="container">
+    <table id="cart" class="table table-hover table-condensed">
+        <thead>
+            <tr>
+                <th style="width:10%">Id</th>
+                <th style="width:30%">Event</th>
+                <th style="width:60%">Description</th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td data-th="Id">
+                    <div class="row">
+
+                        <div class="col-sm-10">
+                            <h4 class="nomargin">@item.Id</h4>
+
+                        </div>
+                    </div>
+                </td>
+                <td data-th="EventName">@item.EventName</td>
+
+                <td data-th="Description">@item.Description</td>
+
+                <td class="actions" data-th="">
+                    @Html.ActionLink("Track", "ProgressDetail", "Tracking", new { id = item.Id }, htmlAttributes: new { @class = "btn-default", @role = "button" })
+                </td>
+            </tr>
+        }
+        <tr>
+            <td colspan="4"><div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div></td>
+        </tr>
+    </table>
+
+</div>
+
+
+@*<div class="divTable blueTable">
+    <div class="divTableHeading">
+        <div class="divTableRow">
+            <div class="divTableHead">Id</div>
+            <div class="divTableHead">Event</div>
+            <div class="divTableHead">Description</div>
+        </div>
+    </div>
+
+    <div class="divTableBody">
+        @foreach (var item in Model)
+        {
+            <div class="divTableRow">
+                <div class="divTableCell">@item.Id</div>
+                <div class="divTableCell">@item.EventName</div>
+                <div class="divTableCell">@item.Description</div>
+            </div>
+        }
+    </div>
+</div>
+<div class="blueTable outerTableFooter">
+    <div class="tableFootStyle">
+        <div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
+    </div>
+</div>*@
