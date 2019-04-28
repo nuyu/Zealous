@@ -26,8 +26,10 @@ namespace Zealous.Models
 
  
         public decimal Amount { get; set; }
-     
-    
-       
+
+
+        public string Image { get; set; }
+
+
     }
 }

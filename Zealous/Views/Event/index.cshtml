@@ -13,24 +13,26 @@
 @{
     foreach (var item in Model)
     {
-        <div class="main-content">
-            <div class="content-image">
-                <a href="#"><img src='@Url.Content("~/image/"+item.Image)' </a>
-            </div>
+<div class="main-content">
+    <div class="content-image">
+        <a href="#"><img src=@Url.Content("~/image/"+item.Image) /> </a>
+      
+    </div>
 
-            <div class="content-title">
-                <a href="#"> @item.Item_name</a>
-            </div>
+    <div class="content-title">
+        <a href="#"><img src=@item.Image /> </a>
+    </div>
 
-            <div class="content-price">
-                Price: $@item.Amount
-            </div>
+    <div class="content-price">
+        Price: $@item.Amount
+    </div>
 
-            <div class="content-link">
-                @Html.ActionLink("Add to cart", "OrderNow", "Payment", new { id =item.Id }, null)
-            </div>
+    <div class="content-link">
+        @Html.ActionLink("Add to cart", "OrderNow", "Payment", new { id = item.Id }, null)
+    </div>
+  
 
-        </div>
+</div>
 
         }
 
