@@ -33,7 +33,9 @@ namespace Zealous
                       "~/Content/site.css",
                       "~/Content/divtable.css",
                       "~/Content/about-us.css",
-                      "~/Content/font-awesome.min.css"));
+                      "~/Content/font-awesome.min.css"
+                     
+                      ));
         }
     }
 }
