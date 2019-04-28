@@ -186,6 +186,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\TrackingController.cs" />
     <Compile Include="Controllers\ZealousController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -222,6 +223,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\divtable.css" />
     <Content Include="Content\Style.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="favicon.ico" />
@@ -305,6 +307,9 @@
     <Content Include="Views\Payment\GetDataPaypal.cshtml" />
     <Content Include="Views\Event\index.cshtml" />
     <Content Include="Views\Event\Event.cshtml" />
+    <Content Include="Views\Tracking\EventList.cshtml" />
+    <Content Include="Views\Tracking\ProgressDetail.cshtml" />
+    <Content Include="Views\Tracking\UpdateEventProgress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Zealous\" />
