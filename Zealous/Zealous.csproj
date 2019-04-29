@@ -235,7 +235,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="image\about-icon.png" />
     <Content Include="image\bbshower.jpg" />
+    <Content Include="image\birthday.jpg" />
     <Content Include="image\business-conference.jpg" />
+    <Content Include="image\business.jpg" />
     <Content Include="image\close.png" />
     <Content Include="image\contact-icon.png" />
     <Content Include="image\Eminem-Quotes-Wallpaper-14249.jpg" />
@@ -272,6 +274,7 @@
     <Content Include="image\rsz_paypal-icon-copy-e1518630761134.jpg" />
     <Content Include="image\wed.jpg" />
     <Content Include="image\wedd.jpg" />
+    <Content Include="image\wedding.jpg" />
     <Content Include="Migration\Product.sql" />
     <Content Include="Migration\Payment.sql" />
     <Content Include="Migration\Equipment.sql" />

@@ -6,10 +6,11 @@ INSERT INTO [Event]
 		  ,[Amount])
 
      VALUES
-           ('Baby shower' ,'zyz', 'wed.jpg', 123, 100),
-		   ('Mama' ,'faf', 'wed.jpg', 123, 200),
-		   ('Baby shower' ,'zyz', 'wed.jpg', 123, 100),
-		   ('Baby shower' ,'zyz', 'wed.jpg', 123, 100)
+           ('Wedding' ,'Wedding packages ', 'wedding.jpg', 'CB1340',100),
+		   ('Engagement' ,'engagement package', 'engagement.jpg', 'CF123', 70),
+		   ('Baby shower' ,'baby shower package', 'bbshower.jpg', 'GX123', 150),
+		   ('Business Conference' ,'Business package', 'business.jpg', 'GY123', 200),
+		   ('Birthday Celebration' ,'birthday package', 'birthday.jpg', 'FL124', 50)
 
 
 
