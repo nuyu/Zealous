@@ -10,26 +10,10 @@ namespace Zealous.Controllers
     public class PaymentController : ZealousController
     {
 
-        public ActionResult Index()
-        {
-            if (Session["cart"] == null)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            //pass data to be used in view
-            var ls = Session["cart"] as List<Product>;
-            return View(ls);
+     
 
 
-        }
-
-        
-
-
-        /// <summary>
-        /// /this function 
-        /// </summary>
-        /// <returns></returns>
+        //retrieve data and save in database 
         public ActionResult GetDataPaypal()
         {
             var getData = new GetDataPaypal();
@@ -47,17 +31,19 @@ namespace Zealous.Controllers
             Session["cart"] =null;
             return View(order);
         }
+
+        //retrieve data to view using id
         public ActionResult OrderNow(int? id)
         {
-            var p = db.Products.FirstOrDefault(t => t.Id == id);
-            List<Product> IsCart;
+            var p = db.Event.FirstOrDefault(t => t.Id == id);
+            List<Event> IsCart;
             if (p == null)
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
             if (Session["strCart"] == null)
             {
-               IsCart = new List<Product>
+               IsCart = new List<Event>
                 {
                    p
             };
@@ -66,7 +52,7 @@ namespace Zealous.Controllers
             }
             else
             {
-                 IsCart = (List<Product>)Session["strCart"];
+                 IsCart = (List<Event>)Session["strCart"];
 
                 IsCart.Add(p);
                 Session["strCart"] = IsCart;
@@ -80,11 +66,11 @@ namespace Zealous.Controllers
        
 
 
-
+        //delete data from session according to id
         public ActionResult Delete(int? id)
         {
             //db.Products.FirstOrDefault(t=>t.Id==id);
-            List<Product> IsCart = (List<Product>)Session["strCart"];
+            List<Event> IsCart = (List<Event>)Session["strCart"];
             var p = IsCart.FirstOrDefault(t => t.Id == id);
             if (p == null)
             {

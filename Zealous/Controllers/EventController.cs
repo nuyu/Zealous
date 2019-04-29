@@ -17,26 +17,26 @@ namespace Zealous.Controllers
        
         public ActionResult Index()
         {
-            var products = db.Products.OrderBy(x => x.Item_name).ToList();
+            var events = db.Event.OrderBy(x => x.Event_name).ToList();
             //product.Add(s);
 
 
-            return View(products);
+            return View(events);
         }
         
         [HttpPost]
-        public ActionResult Index(Product p)
+        public ActionResult Index(Event p)
         {
             if (ModelState.IsValid)
             {
                 if (Session["cart"] != null)
                 {
-                    var ls = Session["cart"] as List<Product>;
+                    var ls = Session["cart"] as List<Event>;
                     ls.Add(p);
                 }
                 else
                 {
-                    Session["cart"] = new List<Product>() { p };
+                    Session["cart"] = new List<Event>() { p };
                 }
               
                 RedirectToAction("Index", "Home"); // Anti F5 submit
