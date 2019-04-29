@@ -200,7 +200,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\Product.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -231,12 +230,15 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="image\about-icon.png" />
+    <Content Include="image\bbshower.jpg" />
     <Content Include="image\business-conference.jpg" />
     <Content Include="image\close.png" />
     <Content Include="image\contact-icon.png" />
     <Content Include="image\Eminem-Quotes-Wallpaper-14249.jpg" />
+    <Content Include="image\engagement.jpg" />
     <Content Include="image\featured-icon.png" />
     <Content Include="image\h&amp;m.jpg" />
+    <Content Include="image\hb.jpg" />
     <Content Include="image\home-icon.png" />
     <Content Include="image\item-01.jpg" />
     <Content Include="image\item-02.jpg" />

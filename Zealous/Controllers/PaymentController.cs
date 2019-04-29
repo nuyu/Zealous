@@ -17,7 +17,7 @@ namespace Zealous.Controllers
                 return RedirectToAction("Index", "Home");
             }
             //pass data to be used in view
-            var ls = Session["cart"] as List<Product>;
+            var ls = Session["cart"] as List<Event>;
             return View(ls);
 
 
@@ -49,15 +49,15 @@ namespace Zealous.Controllers
         }
         public ActionResult OrderNow(int? id)
         {
-            var p = db.Products.FirstOrDefault(t => t.Id == id);
-            List<Product> IsCart;
+            var p = db.Event.FirstOrDefault(t => t.Id == id);
+            List<Event> IsCart;
             if (p == null)
             {
                 return new HttpStatusCodeResult(System.Net.HttpStatusCode.BadRequest);
             }
             if (Session["strCart"] == null)
             {
-               IsCart = new List<Product>
+               IsCart = new List<Event>
                 {
                    p
             };
@@ -66,7 +66,7 @@ namespace Zealous.Controllers
             }
             else
             {
-                 IsCart = (List<Product>)Session["strCart"];
+                 IsCart = (List<Event>)Session["strCart"];
 
                 IsCart.Add(p);
                 Session["strCart"] = IsCart;
@@ -84,7 +84,7 @@ namespace Zealous.Controllers
         public ActionResult Delete(int? id)
         {
             //db.Products.FirstOrDefault(t=>t.Id==id);
-            List<Product> IsCart = (List<Product>)Session["strCart"];
+            List<Event> IsCart = (List<Event>)Session["strCart"];
             var p = IsCart.FirstOrDefault(t => t.Id == id);
             if (p == null)
             {
