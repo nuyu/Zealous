@@ -20,7 +20,7 @@
     }
         .div-container .div-main.top-breadcrumb .span-breadcrumb{
             font-size:10px;
-            color:red;
+            color:lightblue;
         }
 .div-container .div-main .main content{
     float:left;
@@ -42,5 +42,5 @@
               color:blue;
     }
     .div-container .div-main .main content .content-price{
-        color:crimson;
+        color:lightblue;
     }

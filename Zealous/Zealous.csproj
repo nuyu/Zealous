@@ -259,6 +259,7 @@
     <Content Include="image\loading.gif" />
     <Content Include="image\logo.png" />
     <Content Include="image\next.png" />
+    <Content Include="image\plan.png" />
     <Content Include="image\prev.png" />
     <Content Include="image\project-item-01.jpg" />
     <Content Include="image\project-item-02.jpg" />

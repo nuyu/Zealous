@@ -10,40 +10,62 @@
 
 
 
-@{
-    foreach (var item in Model)
-    {
-<div class="main-content">
-    <div class="content-image">
-        <a href="#"><img src=@Url.Content("~/image/"+item.Image) /> </a>
-      
-    </div>
-
-    <div class="content-title">
-       ProductID:@item.ProductId
-    </div>
-
-    <div class="content-price">
-        Price: $@item.Amount
-    </div>
-
-    <div class="content-link">
-        @Html.ActionLink("Add to cart", "OrderNow", "Payment", new { id = item.Id }, null)
-    </div>
-  
-
-</div>
-
-        }
-
-    }
-
-
 
     
 
+    <div class="container">
+        <table id="cart" class="table table-hover table-condensed">
+            <thead>
+                <tr>
+                    <br>
+                    <th style="width:50%">Event Type</th>
+                    <th style="width:8%">ProductID</th>
+                    <th style="width:15%">Description</th>
 
 
-   
 
- 
+
+                    <th style="width:20%" class="text-center">Amount</th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model)
+
+            {
+                <tr>
+                    <td data-th="Product">
+                        <div class="row">
+
+                            <div class="col-sm-10">
+                                <h4 class="nomargin"> <a href="#"><img src=@Url.Content("~/image/"+item.Image) /></a></h4>
+                                @item.EventName
+                            </div>
+                        </div>
+                    </td>
+                    <td data-th="ProductID" class="text-center">@item.ProductId</td>
+                    <td data-th="ProductDescription" class="text-center">@item.ProductDes</td>
+                    <td data-th="Amount" class="text-center">@item.Amount</td>
+                    <td colspan="5"></td>
+                    <td class="actions" data-th="">
+                        @Html.ActionLink("Add to cart", "OrderNow", "Payment", new { id = item.Id }, null)
+                    </td>
+                </tr>
+                
+            }
+            </table>
+            </div>
+
+
+            
+
+            
+
+
+
+
+
+
+
+
+
+
