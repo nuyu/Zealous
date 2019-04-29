@@ -35,7 +35,7 @@ namespace Zealous.Controllers
         //retrieve data to view using id
         public ActionResult OrderNow(int? id)
         {
-            var p = db.Event.FirstOrDefault(t => t.Id == id);
+            var p = db.Events.FirstOrDefault(t => t.Id == id);
             List<Event> IsCart;
             if (p == null)
             {

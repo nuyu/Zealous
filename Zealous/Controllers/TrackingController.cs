@@ -16,7 +16,7 @@ namespace Zealous.Controllers
 
         public ActionResult EventList()
         {
-            var events = db.Event.ToList();
+            var events = db.Events.ToList();
             return View(events);
         }
 

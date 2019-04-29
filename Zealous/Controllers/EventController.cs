@@ -17,7 +17,7 @@ namespace Zealous.Controllers
        
         public ActionResult Index()
         {
-            var events = db.Event.OrderBy(x => x.Event_name).ToList();
+            var events = db.Events.OrderBy(x => x.Event_name).ToList();
             //product.Add(s);
 
 

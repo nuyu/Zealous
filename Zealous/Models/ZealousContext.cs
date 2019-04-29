@@ -11,7 +11,7 @@ namespace Zealous.Models
     {
 
         public DbSet<Payment> Payments { get; set; }
-        public DbSet<Event> Event { get; set; }
+        public DbSet<Event> Events { get; set; }
         public DbSet<EventTracking> EventTrackings { get; set; }
 
 
