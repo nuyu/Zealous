@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Zealous.Models
 {
-    public class Add
+    public class Adduser
     {
         public String userId { set; get; }
         public String status { set; get; }

@@ -13,17 +13,21 @@
 </head>
 <a href=""></a>
 <body>
-    <div>
-        Checkout Paypal Success !^^
-    </div>
+  
     <br />
-    <form action="@ConfigurationManager.AppSettings["urlSubmitPayment"]" method="POST">
-        <input type="hidden" name="cmd" value="_notify-synch">
-        <input type="hidden" name="tx" value="@ViewBag.tx">
-        <input type="hidden" name="at" value="@ConfigurationManager.AppSettings["Token"]">
-        <input type="submit" value="Get Data" class="btn btn-primary">
-    </form>
-    <a href="\">home</a>
+    <div class="jumbotron text-xs-center">
+        <h1 class="display-3">Thank You! </h1>
+        <h3 class="display-3">Transaction Successful </h3>
+        <p class="lead"><strong>Please log in into your paypal account</strong> to receive the payment transaction. This will serve as your receipt.</p>
+        <hr>
+        <p>
+            Having trouble? <a href="~/Views/Home/Contact.cshtml">Contact us</a>
+        </p>
+        <p class="lead">
+            <a class="btn btn-primary btn-sm" href="\" role="button">Continue to homepage</a>
+        </p>
+    </div>
+  
 
 
 </body>

@@ -186,6 +186,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
     <Compile Include="Controllers\TrackingController.cs" />
     <Compile Include="Controllers\ZealousController.cs" />
     <Compile Include="Global.asax.cs">
@@ -195,6 +196,7 @@
     <Compile Include="Models\Entities.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\ZealousContext.cs" />
     <Compile Include="Models\GetDataPaypal.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -253,7 +255,6 @@
     <Content Include="image\loading.gif" />
     <Content Include="image\logo.png" />
     <Content Include="image\next.png" />
-    <Content Include="image\paypal_logo.png" />
     <Content Include="image\prev.png" />
     <Content Include="image\project-item-01.jpg" />
     <Content Include="image\project-item-02.jpg" />
@@ -266,6 +267,7 @@
     <Content Include="image\projects-icon.png" />
     <Content Include="image\prove-bg.png" />
     <Content Include="image\right-about-image.jpg" />
+    <Content Include="image\rsz_paypal-icon-copy-e1518630761134.jpg" />
     <Content Include="image\wed.jpg" />
     <Content Include="image\wedd.jpg" />
     <Content Include="Migration\Product.sql" />
@@ -342,6 +344,9 @@
     <Content Include="Views\Tracking\EventList.cshtml" />
     <Content Include="Views\Tracking\ProgressDetail.cshtml" />
     <Content Include="Views\Tracking\UpdateEventProgress.cshtml" />
+    <Content Include="Views\Supplier\addStatus.cshtml" />
+    <Content Include="Views\Supplier\Status.cshtml" />
+    <Content Include="Views\Supplier\updateStatus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Zealous\" />

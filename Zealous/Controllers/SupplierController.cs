@@ -12,7 +12,7 @@ namespace Zealous.Controllers
         // GET: Supplier
         [HttpGet]
         [Authorize]
-        public ActionResult Supplier()
+        public ActionResult Status()
         {
             return View();
         }
