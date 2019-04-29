@@ -1,10 +1,15 @@
-INSERT INTO [dbo].[Event]
+INSERT INTO [Event]
            ([EventName]
-           ,[Description])
+           ,[ProductDes]
+		   ,[Image]
+		  ,[ProductId]
+		  ,[Amount])
+
      VALUES
-           ('Wedding Party' ,'Nice weding party'),
-		   ('Grad Party' ,'Graduation party'),
-		   ('Kenduri' ,'Some type of parties'),
-GO
+           ('Baby shower' ,'zyz', 'wed.jpg', 123, 100),
+		   ('Mama' ,'faf', 'wed.jpg', 123, 200),
+		   ('Baby shower' ,'zyz', 'wed.jpg', 123, 100),
+		   ('Baby shower' ,'zyz', 'wed.jpg', 123, 100)
+
 
 

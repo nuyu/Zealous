@@ -15,9 +15,9 @@ namespace Zealous.Models
         [Key]
         public int Id { get; set; }
 
-        public string Event_name { get; set; }
-        public string product_id { get; set; }
-        public string Product_des { get; set; }
+        public string EventName { get; set; }
+        public string ProductId { get; set; }
+        public string ProductDes { get; set; }
       
 
  

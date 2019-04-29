@@ -17,13 +17,13 @@ namespace Zealous.Controllers
        
         public ActionResult Index()
         {
-            var events = db.Events.OrderBy(x => x.Event_name).ToList();
+            var events = db.Events.OrderBy(x => x.EventName).ToList();
             //product.Add(s);
 
 
             return View(events);
         }
-        
+       
         [HttpPost]
         public ActionResult Index(Event p)
         {

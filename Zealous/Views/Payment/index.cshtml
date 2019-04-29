@@ -17,8 +17,8 @@
             @for (int i = 0; i < Model.Count; i++)
             {
 
-                <input type="hidden" name="@Url.Content("item_name_"+(i+1))" value="@Model[i].Event_name" />
-                <input type="hidden" name="@Url.Content("item_number_"+(i+1))" value="@Model[i].product_id " />
+                <input type="hidden" name="@Url.Content("item_name_"+(i+1))" value="@Model[i].EventName" />
+                <input type="hidden" name="@Url.Content("item_number_"+(i+1))" value="@Model[i].ProductId " />
                 <input type="hidden" name="@Url.Content("amount_"+(i+1))" value="@Model[i].Amount" />
             }
             <br />
@@ -51,8 +51,8 @@
                                     </div>
                                 </div>
                             </td>
-                            <td data-th="ProductID" class="text-center">@cart.product_id</td>
-                            <td data-th="ProductDescription" class="text-center">@cart.Product_des</td>
+                            <td data-th="ProductID" class="text-center">@cart.ProductId</td>
+                            <td data-th="ProductDescription" class="text-center">@cart.ProductDes</td>
                             <td data-th="Amount" class="text-center">@cart.Amount</td>
                             <td colspan="5"></td>
                             <td class="actions" data-th="">
