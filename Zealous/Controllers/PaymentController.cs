@@ -10,26 +10,10 @@ namespace Zealous.Controllers
     public class PaymentController : ZealousController
     {
 
-        public ActionResult Index()
-        {
-            if (Session["cart"] == null)
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            //pass data to be used in view
-            var ls = Session["cart"] as List<Event>;
-            return View(ls);
+     
 
 
-        }
-
-        
-
-
-        /// <summary>
-        /// /this function 
-        /// </summary>
-        /// <returns></returns>
+        //retrieve data and save in database 
         public ActionResult GetDataPaypal()
         {
             var getData = new GetDataPaypal();
@@ -47,6 +31,8 @@ namespace Zealous.Controllers
             Session["cart"] =null;
             return View(order);
         }
+
+        //retrieve data to view using id
         public ActionResult OrderNow(int? id)
         {
             var p = db.Event.FirstOrDefault(t => t.Id == id);
@@ -80,7 +66,7 @@ namespace Zealous.Controllers
        
 
 
-
+        //delete data from session according to id
         public ActionResult Delete(int? id)
         {
             //db.Products.FirstOrDefault(t=>t.Id==id);
