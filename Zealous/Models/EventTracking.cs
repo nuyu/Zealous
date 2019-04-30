@@ -9,9 +9,9 @@ namespace Zealous.Models
     {
         public int Id { get; set; }
         public int EventId { get; set; }
-        public int CustomerId { get; set; }
-        public int OrganizerId { get; set; }
-        public int SupplierId { get; set; }
+        public string CustomerId { get; set; }
+        public string OrganizerId { get; set; }
+        public string SupplierId { get; set; }
         public DateTime Date { get; set; }
         public string Note { get; set; }
         public byte EventStatus { get; set; }

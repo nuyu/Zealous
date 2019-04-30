@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Zealous.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Zealous.Controllers
 {
@@ -45,10 +46,23 @@ namespace Zealous.Controllers
             return View(eList);
         }
 
-        // Track one event progress
-        public ActionResult UpdateEventProgress(int id, byte statusId)
+        [HttpGet]
+        public ActionResult UpdateEventProgress(int id)
         {
-            var track = new EventTracking { EventId = id, EventStatus = statusId };
+            var track = new EventTracking { EventId = id };
+            var evnt = db.Events.FirstOrDefault(e => e.Id == id);
+            var detail = new ProgressDetail();
+            detail.Id = id;
+            detail.EventName = evnt.EventName;
+            return View(detail);
+        }
+
+
+        // Track one event progress
+        [HttpPost]
+        public ActionResult UpdateEventProgress(ProgressDetail details)
+        {
+            var track = new EventTracking { CustomerId = User.Identity.GetUserId(), EventId = details.Id, EventStatus = details.EventStatus };
             db.EventTrackings.Add(track);
             db.SaveChanges();
             return View();
