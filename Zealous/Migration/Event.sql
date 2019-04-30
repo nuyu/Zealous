@@ -1,7 +1,10 @@
 CREATE TABLE [dbo].[Event](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[EventName] [nvarchar](50) NOT NULL,
-	[Description] [nvarchar](250) NULL,
+	[EventName] nvarchar(50) NOT NULL,
+	[ProductId] int NULL,
+	[ProductDes] nvarchar(250) NULL,
+	[Image] nvarchar(250) NULL,
+	[Amount] decimal NULL,
  CONSTRAINT [PK_Event] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

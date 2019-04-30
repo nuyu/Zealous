@@ -14,6 +14,24 @@
                 <th style="width:60%">Description</th>
             </tr>
         </thead>
+        @*<tr>
+            <td data-th="Id">
+                <div class="row">
+
+                    <div class="col-sm-10">
+                        <h4 class="nomargin">100</h4>
+
+                    </div>
+                </div>
+            </td>
+            <td data-th="EventName">Classic Event</td>
+
+            <td data-th="Description">Very good product</td>
+
+            <td class="actions" data-th="">
+                @Html.ActionLink("Track", "ProgressDetail", "Tracking", new { id = 100 }, htmlAttributes: new { @class = "btn-default", @role = "button" })
+            </td>
+        </tr>*@
 
         @foreach (var item in Model)
         {
@@ -29,7 +47,7 @@
                 </td>
                 <td data-th="EventName">@item.EventName</td>
 
-                <td data-th="Description">@item.Description</td>
+                <td data-th="Description">@item.ProductDes</td>
 
                 <td class="actions" data-th="">
                     @Html.ActionLink("Track", "ProgressDetail", "Tracking", new { id = item.Id }, htmlAttributes: new { @class = "btn-default", @role = "button" })
