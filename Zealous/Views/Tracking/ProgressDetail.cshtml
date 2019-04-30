@@ -1,7 +1,26 @@
-﻿
+﻿@using Zealous.Models
+@model List<Zealous.Models.ProgressDetail>
 @{
     ViewBag.Title = "ProgressDetail";
+
+    var firstEvent = Model.FirstOrDefault();
 }
 
 <h2>ProgressDetail</h2>
 
+<h2>@firstEvent.EventName</h2>
+
+<div class="event-progress">
+    @for(int i = 0; i < Model.Count; i++)
+    {
+        var ev = Model[i];
+    <div >
+        <h3>@((EventStatus)ev.EventStatus)</h3>
+        <h3>@ev.Date</h3>
+    </div>
+    @if(i < Model.Count)
+    {
+        <h2>---></h2>
+    }
+    }
+</div>
