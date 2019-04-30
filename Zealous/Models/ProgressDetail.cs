@@ -6,6 +6,7 @@ using System.Web;
 
 namespace Zealous.Models
 {
+    [NotMapped]
     public class ProgressDetail : EventTracking
     {
         [NotMapped]
