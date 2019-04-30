@@ -193,10 +193,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EnumEventStatus.cs" />
     <Compile Include="Models\EventTracking.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Equipment.cs" />
     <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\ProgressDetail.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\ZealousContext.cs" />
     <Compile Include="Models\GetDataPaypal.cs" />
@@ -276,6 +278,7 @@
     <Content Include="image\wed.jpg" />
     <Content Include="image\wedd.jpg" />
     <Content Include="image\wedding.jpg" />
+    <Content Include="Migration\InsertEventTracking.sql" />
     <Content Include="Migration\Product.sql" />
     <Content Include="Migration\Payment.sql" />
     <Content Include="Migration\Equipment.sql" />
