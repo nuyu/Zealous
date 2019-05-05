@@ -2,10 +2,9 @@
 CREATE TABLE [dbo].[EventTracking](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[EventId] [int] NOT NULL,
-	[CustomerId] [int] NOT NULL,
-	[OrganizerId] [int] NULL,
-	[SupplierId] [int] NOT NULL,
-	[ActionId] [int] NOT NULL,
+	[CustomerId] [nvarchar](128) NULL,
+	[OrganizerId] [nvarchar](128) NULL,
+	[SupplierId] [nvarchar](128) NULL,
 	[PaymentId] [int] NULL,
 	[Date] [datetime] NOT NULL,
 	[Note] [nvarchar](250) NULL,
@@ -16,5 +15,6 @@ CREATE TABLE [dbo].[EventTracking](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
 
 
