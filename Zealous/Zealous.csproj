@@ -278,6 +278,7 @@
     <Content Include="image\wed.jpg" />
     <Content Include="image\wedd.jpg" />
     <Content Include="image\wedding.jpg" />
+    <Content Include="Migration\%24All.sql" />
     <Content Include="Migration\InsertEventTracking.sql" />
     <Content Include="Migration\Product.sql" />
     <Content Include="Migration\Payment.sql" />

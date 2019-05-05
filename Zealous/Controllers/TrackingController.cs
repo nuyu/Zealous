@@ -10,12 +10,6 @@ namespace Zealous.Controllers
 {
     public class TrackingController : ZealousController
     {
-        // GET: Tracking
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         public ActionResult EventList()
         {
             var events = db.Events.ToList();
