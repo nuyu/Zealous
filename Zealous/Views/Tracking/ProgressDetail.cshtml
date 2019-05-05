@@ -11,16 +11,18 @@
 <h2>@firstEvent.EventName</h2>
 
 <div class="event-progress">
-    @for(int i = 0; i < Model.Count; i++)
+    @for (int i = 0; i < Model.Count; i++)
     {
         var ev = Model[i];
-    <div >
-        <h3>@((EventStatus)ev.EventStatus)</h3>
-        <h3>@ev.Date</h3>
-    </div>
-    if(i < Model.Count)
-    {
-        <h2>---></h2>
-    }
+        var strFloat = "float:left";
+
+        <div style="width:200px;height:100px;border:1px solid #000;@strFloat;">
+            <h3>@((EventStatus)ev.EventStatus)</h3>
+            <span>@ev.Date</span>
+        </div>
+        if (i < Model.Count - 1)
+        {
+            <h2 style="@strFloat">></h2>
+        }
     }
 </div>
