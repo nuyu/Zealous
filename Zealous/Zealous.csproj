@@ -216,10 +216,6 @@
     <Content Include="App_Data\aspnet-WebApplication2-20190404034357_log.ldf">
       <DependentUpon>aspnet-WebApplication2-20190404034357.mdf</DependentUpon>
     </Content>
-    <Content Include="App_Data\aspnet-Zealous-20190404105157.mdf" />
-    <Content Include="App_Data\aspnet-Zealous-20190404105157_log.ldf">
-      <DependentUpon>aspnet-Zealous-20190404105157.mdf</DependentUpon>
-    </Content>
     <Content Include="bin\Zealous.dll" />
     <Content Include="bin\Zealous.pdb" />
     <Content Include="Content\about-us.css" />
