@@ -12,28 +12,32 @@
                 <th style="width:10%">Id</th>
                 <th style="width:30%">Event</th>
                 <th style="width:60%">Description</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         @foreach (var item in Model)
         {
-            <tr>
-                <td data-th="Id">
-                    <div class="row">
+        <tr>
+            <td data-th="Id">
+                <div class="row">
 
-                        <div class="col-sm-10">
-                            <h4 class="nomargin">@item.Id</h4>
-
-                        </div>
+                    <div class="col-sm-10">
+                        <h4 class="nomargin">@item.Id</h4>
                     </div>
-                </td>
-                <td data-th="EventName">@item.EventName</td>
+                </div>
+            </td>
+            <td data-th="EventName">@item.EventName</td>
 
-                <td data-th="Description">@item.ProductDes</td>
+            <td data-th="Description">@item.ProductDes</td>
 
-                <td class="actions" data-th="">
-                    @Html.ActionLink("Track", "ProgressDetail", "Tracking", new { id = item.Id }, htmlAttributes: new { @class = "btn-default", @role = "button" })
-                </td>
-            </tr>
+            <td class="actions" data-th="">
+                @Html.ActionLink("Update Progress", "UpdateEventProgress", "Tracking", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+            </td>
+            <td class="actions" data-th="">
+                @Html.ActionLink("Track", "ProgressDetail", "Tracking", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-primary", @role = "button" })
+            </td>
+        </tr>
         }
         <tr>
             <td colspan="4"><div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div></td>

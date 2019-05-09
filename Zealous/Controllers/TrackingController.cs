@@ -43,23 +43,32 @@ namespace Zealous.Controllers
         [HttpGet]
         public ActionResult UpdateEventProgress(int id)
         {
-            var track = new EventTracking { EventId = id };
+            return View(GetProgressDetail(id));
+        }
+
+        private ProgressDetail GetProgressDetail(int id) {
+            //Get the tracking record
+            var eventTracking = db.EventTrackings.AsEnumerable().LastOrDefault(et => et.EventId == id);
             var evnt = db.Events.FirstOrDefault(e => e.Id == id);
             var detail = new ProgressDetail();
             detail.Id = id;
             detail.EventName = evnt.EventName;
-            return View(detail);
-        }
+            detail.EventStatus = (byte)EventStatus.Create;
 
+            //Get the actual saved event status and fill it in the model to return to view
+            if (eventTracking != null)
+                detail.EventStatus = eventTracking.EventStatus;
+            return detail;
+        }
 
         // Track one event progress
         [HttpPost]
         public ActionResult UpdateEventProgress(ProgressDetail details)
         {
-            var track = new EventTracking { CustomerId = User.Identity.GetUserId(), EventId = details.Id, EventStatus = details.EventStatus };
+            var track = new EventTracking { CustomerId = User.Identity.GetUserId(), EventId = details.Id, EventStatus = details.EventStatus, Date = DateTime.Now };
             db.EventTrackings.Add(track);
             db.SaveChanges();
-            return View();
+            return View(GetProgressDetail(details.Id));
         }
 
 
